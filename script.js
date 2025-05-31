@@ -206,3 +206,31 @@ const categoryObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 
 categories.forEach(cat => categoryObserver.observe(cat));
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // blocca invio classico
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formspree.io/f/mblonnld", {
+        method: "POST",
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      });
+
+      if (response.ok) {
+        window.location.href = "/whosfra/thanks.html"; // ✅ percorso dalla root GitHub Pages
+      } else {
+        alert("Errore durante l'invio del messaggio.");
+      }
+    } catch (error) {
+      console.error("Errore:", error);
+      alert("Errore imprevisto.");
+    }
+  });
+});
