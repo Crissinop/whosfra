@@ -1,0 +1,105 @@
+Modifiche implementate
+
+------------------------------------------------------------
+
+Lunedì 19/05/2025 - 0.1.1
+
+- Migliorata animazione dei video nella home al momento dell'hover del mouse
+- Aumentato zoom dei video al momento dell'hover del mouse
+- Migliorato il design delle icone social nell'header e nel footer
+- Implementazione start dei video quando c'è l'hover del mouse
+- Implementazione stop dei video quando l'hover del mouse termina
+- Migliorato il design del contact form e aggiunto un leggero effetto glass
+- Aggiunto tasto "See more…" in sovraimpressione a ciascun video nella home. L'hover del video è mantenuto anche se l'hover giace sul tasto.
+- Aggiunte pagine music.html, clubbing.html, commercial.html, travel.html, festival.html per la visualizzazione di tutti i progetti riguardanti una determinata categoria.
+
+------------------------------------------------------------
+
+Martedì 20/05/2025 - 0.1.2
+
+- Rimosse linee grigie presenti sotto i titoli delle categorie dei progetti nella home.
+- Rimossa mail dal footer
+
+------------------------------------------------------------
+
+Mercoledì 21/05/2025 - 0.1.3
+
+- Aggiornata P.IVA nel footer di ogni pagina
+- Aggiornate descrizioni dei progetti su ciascuna pagina correlata
+
+------------------------------------------------------------
+
+Giovedì 22/05/2025 - 0.1.4
+
+- Aggiornati link delle icone social nell'header di ogni pagina
+
+------------------------------------------------------------
+
+Sabato 24/05/2025 - 0.1.5
+
+- Rimossa scritta "See more" da ogni video. Ora il click del video reindirizza l'utente direttamente alla pagina della categoria correlata.
+- Fix animazione dei video dopo il landing nelle pagine delle categorie
+- Modificata animazione dei video nella home
+- Possibilità di raggiungere le pagine dei progetti cliccando sul titolo corrispondente nella home
+- Impostato "primary-color" come colore attivo durante l'hover del left header e delle social icons
+
+------------------------------------------------------------
+
+Domenica 25/05/2025 - 0.1.6
+
+- Ridotto il valore del box-shadow del contact form
+- Aggiunta leggera animazione per comparsa del border-bottom degli input nel contact form
+
+------------------------------------------------------------
+
+Lunedì 26/05/2025 - 0.1.7
+
+- Inizio processo di ottimizzazione mobile:
+   - Aggiunto hamburger sulla sinistra in ogni pagina (visibile solo su desktop)
+   - Aggiunta animazione di comparsa del menu laterale
+   - Rimosse icone social nell'header
+
+------------------------------------------------------------
+
+Martedì 27/05/2025 - 0.1.8
+
+- Pulsante del contact form posizionato al centro
+- Modifiche effettuate per mobile:
+   - Fix glitch dei video nella home
+   - Aumentato padding nel menù a tendina
+   - Aggiunto mini footer nel menù a tendina
+
+------------------------------------------------------------
+
+Giovedì 29/05/2025 - 0.1.9
+
+- Pubblicato sito su repo GitHub (https://crissinop.github.io/whosfra/)
+- Aggiunto collegamento sul logo centrale verso la home 
+
+------------------------------------------------------------
+
+Venerdì 30/05/2025 - 0.2.0
+
+- Migliorata l'organizzazione di tutte le cartelle
+- Migliorata l'indentazione e i commenti del codice
+- Corretti tutti i collegamenti ipertestuali
+- Rimosso cerchio grigio che circonda tutte le social icons
+- Impostato size delle social icons a 1.6rem
+- Cambiata immagine dell'header center
+- Modificata descrizione dei progetti nelle pagine corrispettive
+- Aggiunta una pagina html per ogni singolo progetto
+- Ogni progetto è ora accessibile tramite href da ogni pagina di una categoria
+- Aggiunto titolo del progetto all'hover delle immagini nella home
+
+------------------------------------------------------------
+
+Sabato 31/05/2025 - 0.2.1
+
+- Aggiunta animazione staggered alle immagini nella home
+
+Domande
+
+- Modifica in .video-grid: gap: 2rem o 1rem?
+- Valutare possibilità di aggiungere screenshot su mobile nella home al posto dei video
+
+TO-DO LIST
