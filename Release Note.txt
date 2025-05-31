@@ -96,10 +96,15 @@ Venerdì 30/05/2025 - 0.2.0
 Sabato 31/05/2025 - 0.2.1
 
 - Aggiunta animazione staggered alle immagini nella home
+- Impostato max-height: 90px per logo-image. Quindi il logo centrale è stato ridotto (valore precedente: 110px)
+- Modifiche nella pagina Contact:
+    - Modificata scritta "Contact me" 
+    - Modificata ombreggiatura del contact form
+    - Modificato script.js per bypassare il redirect alla pagina di Formspree dopo aver compilato il form
+
 
 Domande
 
 - Modifica in .video-grid: gap: 2rem o 1rem?
-- Valutare possibilità di aggiungere screenshot su mobile nella home al posto dei video
 
 TO-DO LIST
