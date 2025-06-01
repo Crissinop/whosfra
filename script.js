@@ -229,8 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Errore durante l'invio del messaggio.");
       }
     } catch (error) {
-      console.error("Errore:", error);
-      alert("Errore imprevisto. Assicurati di disattivare eventuali AdBlockers.");
+
     }
   });
 });
