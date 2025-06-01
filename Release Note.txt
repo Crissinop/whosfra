@@ -102,6 +102,13 @@ Sabato 31/05/2025 - 0.2.1
     - Modificata ombreggiatura del contact form
     - Modificato script.js per bypassare il redirect alla pagina di Formspree dopo aver compilato il form
 
+------------------------------------------------------------
+
+Sabato 31/05/2025 - 0.2.1
+
+- Modificato testo nella pagina about
+
+
 
 Domande
 
