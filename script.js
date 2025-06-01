@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (error) {
       console.error("Errore:", error);
-      alert("Errore imprevisto.");
+      alert("Errore imprevisto. Assicurati di disattivare eventuali AdBlockers.");
     }
   });
 });
