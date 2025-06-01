@@ -419,7 +419,7 @@ footer p + p {
   width: fit-content;
 }
 
-.video-grid {
+.image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -429,7 +429,7 @@ footer p + p {
   padding: 0 1rem;
 }
 
-.video-grid video {
+.image-grid video {
   width: 100%;
   border-radius: 8px;
   transition: transform 0.8s ease, box-shadow 0.8s ease;
@@ -437,21 +437,21 @@ footer p + p {
   z-index: 1;
 }
 
-.video-grid video:hover {
+.image-grid video:hover {
   transform: scale(1.05);
   z-index: 10;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
-.video-grid video:nth-child(3n+1):hover {
+.image-grid video:nth-child(3n+1):hover {
   transform: scale(1.25) translateX(10%);
 }
 
-.video-grid video:nth-child(3n+2):hover {
+.image-grid video:nth-child(3n+2):hover {
   transform: scale(1.25);
 }
 
-.video-grid video:nth-child(3n+3):hover {
+.image-grid video:nth-child(3n+3):hover {
   transform: scale(1.25) translateX(-10%);
 }
 
@@ -459,7 +459,7 @@ footer p + p {
    Video Grid Animation
 ======================================== */
 .category,
-.video-grid {
+.image-grid {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -467,7 +467,7 @@ footer p + p {
 }
 
 .category.visible,
-.video-grid.visible {
+.image-grid.visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -592,7 +592,7 @@ footer p + p {
 /* ========================================
    Sections and Grids
 ======================================== */
-.video-grid {
+.image-grid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-columns: repeat(3, 1fr);
@@ -606,24 +606,24 @@ footer p + p {
 }
 
 @media (max-width: 599px) {
-  .video-grid {
+  .image-grid {
     grid-template-columns: 1fr;
   }
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
-  .video-grid {
+  .image-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 900px) {
-  .video-grid {
+  .image-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.video-grid .video-wrapper video {
+.image-grid .video-wrapper video {
   width: 100%;
   border-radius: 8px;
   transition: transform 0.8s ease, box-shadow 0.8s ease;
@@ -631,13 +631,13 @@ footer p + p {
   z-index: 1;
 }
 
-.video-grid .video-wrapper:hover,
-.video-grid .video-wrapper:has(.see-more:hover) {
+.image-grid .video-wrapper:hover,
+.image-grid .video-wrapper:has(.see-more:hover) {
   z-index: 10;
 }
 
-.video-grid .video-wrapper:nth-child(3n+1):hover video,
-.video-grid .video-wrapper:has(.see-more:hover):nth-child(3n+1) video {
+.image-grid .video-wrapper:nth-child(3n+1):hover video,
+.image-grid .video-wrapper:has(.see-more:hover):nth-child(3n+1) video {
   transform: scale(1.25) translateX(10%);
   position: absolute;
   top: 0;
@@ -646,8 +646,8 @@ footer p + p {
   height: 100%;
 }
 
-.video-grid .video-wrapper:nth-child(3n+2):hover video,
-.video-grid .video-wrapper:has(.see-more:hover):nth-child(3n+2) video {
+.image-grid .video-wrapper:nth-child(3n+2):hover video,
+.image-grid .video-wrapper:has(.see-more:hover):nth-child(3n+2) video {
   transform: scale(1.25);
   position: absolute;
   top: 0;
@@ -656,8 +656,8 @@ footer p + p {
   height: 100%;
 }
 
-.video-grid .video-wrapper:nth-child(3n+3):hover video,
-.video-grid .video-wrapper:has(.see-more:hover):nth-child(3n+3) video {
+.image-grid .video-wrapper:nth-child(3n+3):hover video,
+.image-grid .video-wrapper:has(.see-more:hover):nth-child(3n+3) video {
   transform: scale(1.25) translateX(-10%);
   position: absolute;
   top: 0;
@@ -666,8 +666,8 @@ footer p + p {
   height: 100%;
 }
 
-.video-grid .video-wrapper:hover video,
-.video-grid .video-wrapper:has(.see-more:hover) video {
+.image-grid .video-wrapper:hover video,
+.image-grid .video-wrapper:has(.see-more:hover) video {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -909,18 +909,18 @@ footer p + p {
   }
 
   /* Evita effetto zoom sul video quando si fa tap */
-  .video-grid .video-wrapper video:hover {
+  .image-grid .video-wrapper video:hover {
     transform: none !important; /* Annulla scaling */
     box-shadow: none !important; /* Annulla ombra */
   }
 
   /* Evita scaling da parte del contenitore in hover */
-  .video-grid .video-wrapper:hover video {
+  .image-grid .video-wrapper:hover video {
     transform: none !important;
     box-shadow: none !important;
   }
 
-  .video-grid .video-wrapper video {
+  .image-grid .video-wrapper video {
     pointer-events: auto !important;
     transform: none !important;
     transition: none !important;
@@ -929,23 +929,23 @@ footer p + p {
     z-index: 1 !important;
   }
 
-  .video-grid .video-wrapper:hover video,
-  .video-grid .video-wrapper:active video,
-  .video-grid .video-wrapper:focus video {
+  .image-grid .video-wrapper:hover video,
+  .image-grid .video-wrapper:active video,
+  .image-grid .video-wrapper:focus video {
     transform: none !important;
     box-shadow: none !important;
     position: static !important;
   }
 
-  .video-grid .video-wrapper:focus-within video,
-  .video-grid .video-wrapper video:focus {
+  .image-grid .video-wrapper:focus-within video,
+  .image-grid .video-wrapper video:focus {
     outline: none;
     transform: none !important;
     box-shadow: none !important;
     position: static !important;
   }
 
-  .video-grid .video-wrapper {
+  .image-grid .video-wrapper {
     position: static !important;
   }
 }
