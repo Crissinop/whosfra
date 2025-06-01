@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.25 });
 
-  document.querySelectorAll(".category, .video-grid").forEach(el => observer.observe(el));
+  document.querySelectorAll(".category, .image-grid").forEach(el => observer.observe(el));
 
   // 📎 Link dinamico "See more..." in base a data-category
   document.querySelectorAll(".video-wrapper").forEach(wrapper => {
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Blocca ogni tentativo di autoplay o interazione video su mobile
 if (window.innerWidth <= 768) {
-  document.querySelectorAll(".video-grid .video-wrapper video").forEach(video => {
+  document.querySelectorAll(".image-grid .video-wrapper video").forEach(video => {
     video.removeAttribute("autoplay");
     video.removeAttribute("muted");
     video.removeAttribute("loop");
