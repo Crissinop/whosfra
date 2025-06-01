@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 🎞️ Video hover + z-index + autoplay dopo 1 secondo
-  const videos = document.querySelectorAll(".video-grid video");
+  const videos = document.querySelectorAll(".image-grid video");
 
   videos.forEach(video => {
     video.muted = true;
