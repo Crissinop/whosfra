@@ -61,37 +61,53 @@
     <p class="form-description">Let’s get in touch. Send a message for collaborations, projects or just to say hi.</p>
     
     <form action="https://formspree.io/f/mblonnld" method="POST" id="contact-form">
+      <!-- Redirect -->
       <input type="hidden" name="_redirect" value="thanks.html" />
+      
+      <!-- Honeypot antispam -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
+      <!-- First Name -->
       <div class="form-group">
         <label for="firstname">First Name*</label>
         <input type="text" id="firstname" name="name" placeholder="Your first name" required />
       </div>
 
+      <!-- Last Name -->
       <div class="form-group">
         <label for="lastname">Last Name*</label>
         <input type="text" id="lastname" name="lastname" placeholder="Your last name" required />
       </div>
 
+      <!-- Phone -->
       <div class="form-group">
         <label for="phone">Mobile Phone</label>
-        <input type="phone" id="phone" name="phone" placeholder="Your phone number" />
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
       </div>
 
+      <!-- Email -->
       <div class="form-group">
         <label for="email">Email*</label>
         <input type="email" id="email" name="email" placeholder="you@example.com" required />
       </div>
 
+      <!-- Message -->
       <div class="form-group">
         <label for="message">Message*</label>
-        <textarea id="message" name="message" rows="6" minlength="100" title="Minimum 100 characters" placeholder="The reason why you are texting me and what is your project about" required></textarea>
+        <textarea id="message" name="message" rows="6" minlength="80" title="Minimum 80 characters" placeholder="The reason why you are texting me and what is your project about" required></textarea>
       </div>
+
+      <!-- reCAPTCHA (opzionale, attivare su Formspree e aggiungere la chiave site) -->
+      <!--
+      <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      -->
 
       <button type="submit">Send Message</button>
     </form>
   </section>
   </main>
+
 
 
 <!------------------------------------------------------------>
