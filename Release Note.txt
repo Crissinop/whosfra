@@ -108,6 +108,18 @@ Sabato 31/05/2025 - 0.2.1
 
 - Modificato testo nella pagina about
 
+------------------------------------------------------------
+
+Domenica 1/06/2025 - 0.2.2
+
+- Miglioramenti minori
+
+------------------------------------------------------------
+
+Lunedì 2/06/2025 - 0.2.1
+
+- Temporaneamente nascosti progetti commercial e festival
+
 
 
 Domande
