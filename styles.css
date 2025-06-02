@@ -195,7 +195,7 @@ a {
   color: #f2f2f2;
   font-size: 1.5rem;
   text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 1s ease, color 1s ease;
   margin-left: 0.8rem;
   background: none;
   border-radius: 0;
