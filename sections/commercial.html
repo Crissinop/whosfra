@@ -1,107 +1,83 @@
 <!DOCTYPE html>
+
 <html lang="en">
+    <!------------------------------------------------------------>
+    <!-- Head                                                   -->
+    <!------------------------------------------------------------>
+    <head>
+        <meta charset="utf-8" />
+        <meta content="dark light" name="color-scheme" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <link href="../media/images/favicon.png" rel="icon" type="image/png" />
+        <title>Commercial | Francesco Aiena</title>
+        <link href="../styles.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+        <script defer="" src="../script.js"></script>
+    </head>
+    <!------------------------------------------------------------>
+    <!-- Body                                                   -->
+    <!------------------------------------------------------------>
+    <body>
+        <div class="hamburger">☰</div>
+        <header class="site-header">
+            <div class="header-left">
+                <nav>
+                    <div class="nav-main">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../about.html">About</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-footer-info mobile-only">
+                        <p>© 2025 Francesco Aiena. All rights reserved.</p>
+                        <p>P.IVA: 05413890756</p>
+                    </div>
+                </nav>
+            </div>
+            <div class="header-center">
+                <a href="../index.html">
+                    <img alt="Francesco Aiena" class="logo-image" src="../media/images/header-center.png" />
+                </a>
+            </div>
+            <div class="header-right social-icons">
+                <a href="https://www.youtube.com/@whosfra" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/whosfra/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </header>
+        <!------------------------------------------------------------>
+        <!--                           Main                         -->
+        <!------------------------------------------------------------>
+        <main>
+            <section class="category">
+                <h2>Commercial</h2>
 
-<!------------------------------------------------------------>
-<!-- Head                                                   -->
-<!------------------------------------------------------------>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="color-scheme" content="dark light">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="../media/images/favicon.png" type="image/png" />
-  <title>Commercial | Francesco Aiena</title>
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="../script.js" defer></script>
-</head>
-
-<!------------------------------------------------------------>
-<!-- Body                                                   -->
-<!------------------------------------------------------------>
-<body>
-  <div class="hamburger">&#9776;</div>
-  
-  <header class="site-header">
-    <div class="header-left">
-      <nav>
-        <div class="nav-main">
-          <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="nav-footer-info mobile-only">
-          <p>&copy; 2025 Francesco Aiena. All rights reserved.</p>
-          <p>P.IVA: 05413890756</p>
-        </div>
-      </nav>
-    </div>
-    
-    <div class="header-center">
-      <a href="../index.html">
-        <img src="../media/images/header-center.png" alt="Francesco Aiena" class="logo-image" />
-      </a>
-    </div>
-
-    <div class="header-right social-icons">
-      <a href="https://www.youtube.com/@whosfra" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/whosfra/" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
-  </header>
-
-<!------------------------------------------------------------>
-<!-- Main                                                   -->
-<!------------------------------------------------------------>
-  <main>
-    <section class="category">
-      <h2>Commercial</h2>
-      <div class="video-column">
-        
-        <div class="video-wrapper" data-category="shorts">
-          <video src="../videos/commercial/commercial1.mp4" controls></video>
-          <a href="projects/commercial/commercial1.html">
-            <p>
-              <strong>Louis Armstrong</strong><br>Paolo Bonolis<br>Sapporo
-            </p>
-          </a>
-        </div>
-
-        <div class="video-wrapper" data-category="shorts">
-          <video src="../videos/commercial/commercial2.mp4" controls></video>
-          <a href="projects/commercial/commercial2.html">
-            <p>
-              <strong>FERDINANDO REGINALDO</strong><br>Paolo Bonolis<br>Nagoya
-            </p>
-          </a>
-        </div>
-        
-        <div class="video-wrapper" data-category="shorts">
-          <video src="../videos/commercial/commercial3.mp4" controls></video>
-          <a href="projects/commercial/commercial3.html">
-            <p>
-              <strong>THE LOPIS</strong><br>Luca Marito<br>Hokkaido
-            </p>
-          </a>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-<!------------------------------------------------------------>
-<!--                           Footer                       -->
-<!------------------------------------------------------------>
-  <footer>
-    <div class="footer-social social-icons">
-      <a href="https://youtube.com/@whosfra" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://instagram.com/whosfra" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
-    <p>&copy; 2025 Francesco Aiena. All rights reserved.</p>
-
-    <p>P.IVA: 05413890756</p>
-  </footer>
-</body>
-
+                <section class="projects-grid">
+                    <div class="project-card">
+                        <video controls="True" src="../media/videos/commercial/commercial1.mp4"></video>
+                        <h3><a href="./projects/commercial/commercial1.html">Commercial Project 1</a></h3>
+                    </div>
+                    <div class="project-card">
+                        <video controls="True" src="../media/videos/commercial/commercial2.mp4"></video>
+                        <h3><a href="./projects/commercial/commercial2.html">Commercial Project 2</a></h3>
+                    </div>
+                    <div class="project-card">
+                        <video controls="True" src="../media/videos/commercial/commercial3.mp4"></video>
+                        <h3><a href="./projects/commercial/commercial3.html">Commercial Project 3</a></h3>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <!------------------------------------------------------------>
+        <!--                           Footer                       -->
+        <!------------------------------------------------------------>
+        <footer>
+            <div class="footer-social social-icons">
+                <a href="https://youtube.com/@whosfra" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com/whosfra" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>© 2025 Francesco Aiena. All rights reserved.</p>
+            <p>P.IVA: 05413890756</p>
+        </footer>
+    </body>
 </html>

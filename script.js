@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sectionToPage = {
     "music-videos": "sections/music.html",
     "clubbing": "sections/clubbing.html",
-    "travel-videos": "sections/travel.html",
+    "shorts": "sections/shorts.html",
     "commercial": "sections/commercial.html",
     "festival": "sections/festival.html"
   };

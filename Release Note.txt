@@ -120,6 +120,12 @@ Lunedì 2/06/2025 - 0.2.1
 
 - Temporaneamente nascosti progetti commercial e festival
 
+------------------------------------------------------------
+
+Martedì 3/06/2025 - 0.2.2
+
+- I video nella pagina di ogni categoria sono ora mostrati tramite griglia orizzontale anziché verticale.
+- Miglioramenti minori
 
 
 Domande
