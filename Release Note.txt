@@ -126,7 +126,15 @@ Martedì 3/06/2025 - 0.2.2
 
 - I video nella pagina di ogni categoria sono ora mostrati tramite griglia orizzontale anziché verticale.
 - Miglioramenti minori
+- Aggiunte breadcrumbs per muoversi facilmente nel sito
 
+------------------------------------------------------------
+
+Mercoledì 4/06/2025 - 0.2.3
+
+- Ridotta shadow del contact form
+- Migliorata grafica delle label dei progetti
+- Miglioramenti minori
 
 Domande
 

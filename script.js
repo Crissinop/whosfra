@@ -153,9 +153,6 @@ document.addEventListener("click", (e) => {
 
   // 🌟 Animazione STAGGERED su categorie
   const categories = document.querySelectorAll(".category");
-
-
-
 });
 });
 

@@ -1,123 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!------------------------------------------------------------>
+    <!-- Head                                                   -->
+    <!------------------------------------------------------------>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="color-scheme" content="dark light" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="media/images/favicon.png" type="image/png" />
+        <title>Contact | Francesco Aiena</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <script src="script.js" defer></script>
+    </head>
 
-<!------------------------------------------------------------>
-<!-- Head                                                   -->
-<!------------------------------------------------------------>
-<head>
-  <meta charset="UTF-8" />
-  <meta name="color-scheme" content="dark light">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="media/images/favicon.png" type="image/png" />
-  <title>Contact | Francesco Aiena</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <script src="script.js" defer></script>
-</head>
+    <!------------------------------------------------------------>
+    <!-- Body                                                   -->
+    <!------------------------------------------------------------>
+    <body>
+        <div class="hamburger">&#9776;</div>
 
-<!------------------------------------------------------------>
-<!-- Body                                                   -->
-<!------------------------------------------------------------>
-<body>
-  <div class="hamburger">&#9776;</div>
+        <header class="site-header">
+            <div class="header-left">
+                <nav>
+                    <div class="nav-main">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
 
-  <header class="site-header">
-    <div class="header-left">
-      <nav>
-        <div class="nav-main">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+                    <div class="nav-footer-info mobile-only">
+                        <p>&copy; 2025 Francesco Aiena. All rights reserved.</p>
+                        <p>P.IVA: 05413890756</p>
+                    </div>
+                </nav>
+            </div>
 
-        <div class="nav-footer-info mobile-only">
-          <p>&copy; 2025 Francesco Aiena. All rights reserved.</p>
-          <p>P.IVA: 05413890756</p>
-        </div>
-      </nav>
-    </div>
+            <div class="header-center">
+                <a href="index.html">
+                    <img src="media/images/header-center.png" alt="Francesco Aiena" class="logo-image" />
+                </a>
+            </div>
 
-    <div class="header-center">
-      <a href="index.html">
-        <img src="media/images/header-center.png" alt="Francesco Aiena" class="logo-image" />
-      </a>
-    </div>
+            <div class="header-right social-icons">
+                <a href="https://www.youtube.com/@whosfra" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/whosfra/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </header>
 
-    <div class="header-right social-icons">
-      <a href="https://www.youtube.com/@whosfra" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.instagram.com/whosfra/" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
-  </header>
+        <!------------------------------------------------------------>
+        <!--                           Main                         -->
+        <!------------------------------------------------------------>
+        <main>
+            <section class="contact-form">
+                <h1>Contact me</h1>
+                <p class="form-description">Let’s get in touch. Send a message for collaborations, projects or just to say hi.</p>
 
-<!------------------------------------------------------------>
-<!--                           Main                         -->
-<!------------------------------------------------------------>
-  <main>
-  <section class="contact-form">
-    <h1>Contact me</h1>
-    <p class="form-description">Let’s get in touch. Send a message for collaborations, projects or just to say hi.</p>
-    
-    <form action="https://formspree.io/f/mblonnld" method="POST" id="contact-form">
-      <!-- Redirect -->
-      <input type="hidden" name="_redirect" value="thanks.html" />
-      
-      <!-- Honeypot antispam -->
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                <form action="https://formspree.io/f/mblonnld" method="POST" id="contact-form">
+                    <!-- Redirect -->
+                    <input type="hidden" name="_redirect" value="thanks.html" />
 
-      <!-- First Name -->
-      <div class="form-group">
-        <label for="firstname">First Name*</label>
-        <input type="text" id="firstname" name="name" placeholder="Your first name" required />
-      </div>
+                    <!-- Honeypot antispam -->
+                    <input type="text" name="_gotcha" style="display: none;" tabindex="-1" autocomplete="off" />
 
-      <!-- Last Name -->
-      <div class="form-group">
-        <label for="lastname">Last Name*</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Your last name" required />
-      </div>
+                    <!-- First Name -->
+                    <div class="form-group">
+                        <label for="firstname">First Name*</label>
+                        <input type="text" id="firstname" name="name" placeholder="Your first name" required />
+                    </div>
 
-      <!-- Phone -->
-      <div class="form-group">
-        <label for="phone">Mobile Phone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
-      </div>
+                    <!-- Last Name -->
+                    <div class="form-group">
+                        <label for="lastname">Last Name*</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Your last name" required />
+                    </div>
 
-      <!-- Email -->
-      <div class="form-group">
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required />
-      </div>
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Mobile Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+                    </div>
 
-      <!-- Message -->
-      <div class="form-group">
-        <label for="message">Message*</label>
-        <textarea id="message" name="message" rows="6" minlength="80" title="Minimum 80 characters" placeholder="The reason why you are texting me and what is your project about" required></textarea>
-      </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+                    </div>
 
-      <!-- reCAPTCHA (opzionale, attivare su Formspree e aggiungere la chiave site) -->
-      <!--
-      <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-      -->
+                    <!-- Message -->
+                    <div class="form-group">
+                        <label for="message">Message*</label>
+                        <textarea id="message" name="message" rows="6" minlength="80" title="Minimum 80 characters" placeholder="The reason why you are texting me and what is your project about" required></textarea>
+                    </div>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-  </main>
+                    <!-- reCAPTCHA (opzionale, attivare su Formspree e aggiungere la chiave site) -->
+                    <!--
+                      <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+                    -->
 
-<!------------------------------------------------------------>
-<!--                           Footer                       -->
-<!------------------------------------------------------------>
-  <footer>
-    <div class="footer-social social-icons">
-      <a href="https://youtube.com/@whosfra" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://instagram.com/whosfra" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
-    <p>&copy; 2025 Francesco Aiena. All rights reserved.</p>
-    <p>P.IVA: 05413890756</p>
-  </footer>
-</body>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
 
+        <!------------------------------------------------------------>
+        <!--                           Footer                       -->
+        <!------------------------------------------------------------>
+        <footer>
+            <div class="footer-social social-icons">
+                <a href="https://youtube.com/@whosfra" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://instagram.com/whosfra" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 Francesco Aiena. All rights reserved.</p>
+            <p>P.IVA: 05413890756</p>
+        </footer>
+    </body>
 </html>
