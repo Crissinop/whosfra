@@ -341,6 +341,7 @@ footer p + p {
 .form-group {
   display: flex;
   flex-direction: column;
+  letter-spacing: 0.1em;
 }
 
 .form-group label {
