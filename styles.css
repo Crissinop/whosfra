@@ -318,7 +318,7 @@ footer p + p {
 }
 
 .contact-form:hover {
-  background: rgba(255, 255, 255, 0.065);
+  background: rgba(255, 255, 255, 0.055);
   box-shadow: 1px 1px 2px rgba(228, 224, 31, 0.2);
 }
 
