@@ -514,6 +514,7 @@ footer p + p {
   max-width: 1000px;
   margin: auto;
   line-height: 1.8;
+  letter-spacing: 1px;
 }
 
 .about-content {
@@ -863,6 +864,27 @@ footer p + p {
 }
 
 @media (max-width: 768px) {
+  h1 {
+    padding-top: 60px;
+  }
+
+  main {
+    padding-top: 100px;
+  }
+
+  .back-link {
+    margin-top: 5rem;
+    display: block !important;
+    position: relative;
+  }
+
+  .back-link-text {
+    display: block !important;
+    position: relative;
+    z-index: 10;
+    padding: 1rem;
+  }
+  
   /* Nascondi social icons nell'header */
   .header-right.social-icons {
     display: none !important;
@@ -878,6 +900,45 @@ footer p + p {
     cursor: pointer;
     font-size: 1.8rem;
     color: var(--primary-color);
+  }
+
+  .only-mobile {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+  }
+
+  .site-header {
+    display: none !important;
+  }
+
+  .only-mobile .hamburger {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+
+  .only-mobile .header-center {
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: -1px;
+  height: auto;
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+}
+
+  .only-mobile .logo-image {
+    height: 55px;
+    object-fit: contain;
   }
 
   /* Nascondi menu principale */
@@ -1008,6 +1069,10 @@ footer p + p {
   display: none;
 }
 
+.only-mobile {
+  display: none;
+}
+
 /* Fix per video troppo piccoli nelle pagine dei progetti */
 .video-column .video-wrapper video {
   width: 100%;
@@ -1044,6 +1109,7 @@ footer p + p {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* Layout griglia per categorie progetto */
 .projects-grid {
   display: flex;

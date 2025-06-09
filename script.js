@@ -112,22 +112,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 🍔 Hamburger menu: toggle animazione + comparsa graduale
   const hamburger = document.querySelector(".hamburger");
-  const nav = document.querySelector(".header-left nav");
-  const body = document.body;
+const nav = document.querySelector(".only-mobile .header-left nav"); // più preciso
+const body = document.body;
 
-  if (hamburger && nav) {
-    hamburger.addEventListener("click", () => {
-      nav.classList.toggle("open");
-      hamburger.classList.toggle("active");
+if (hamburger && nav) {
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation(); // ✅ blocca il "click through" sul video
+    nav.classList.toggle("open");
+    hamburger.classList.toggle("active");
 
-      // ✅ Blocca lo scroll del body quando il menu è aperto
-      if (nav.classList.contains("open")) {
-        body.style.overflow = "hidden";
-      } else {
-        body.style.overflow = "";
-      }
-    });
-  }
+    if (nav.classList.contains("open")) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "";
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+      nav.classList.remove("open");
+      hamburger.classList.remove("active");
+      body.style.overflow = "";
+    }
+  });
+}
+
 
   // Blocca ogni tentativo di autoplay o interazione video su mobile
 if (window.innerWidth <= 768) {
@@ -221,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (response.ok) {
-        window.location.href = "/whosfra/thanks.html"; // ✅ percorso dalla root GitHub Pages
+        window.location.href = "/thanks.html"; // ✅ percorso dalla root GitHub Pages
       } else {
         alert("Errore durante l'invio del messaggio.");
       }

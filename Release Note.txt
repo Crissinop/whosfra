@@ -136,6 +136,16 @@ Mercoledì 4/06/2025 - 0.2.3
 - Migliorata grafica delle label dei progetti
 - Miglioramenti minori
 
+------------------------------------------------------------
+
+Lunedì 9/06/2025 - 0.2.4
+
+- Miglioramento riguardo l'ottimizzazione mobile
+- Aggiunto letter-spacing: 1px in about-section
+- Miglioramenti minori
+
+------------------------------------------------------------
+
 Domande
 
 - Modifica in .video-grid: gap: 2rem o 1rem?
