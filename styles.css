@@ -602,6 +602,7 @@ footer p + p {
   .contact-form {
     padding: 1.5rem;
   }
+
   .contact-form input,
   .contact-form textarea {
     font-size: 1.1rem;
@@ -903,16 +904,16 @@ footer p + p {
   }
 
   .back-link {
-    margin-top: 5rem;
-    display: block !important;
-    position: relative;
+    display: none !important;
+    /* margin-top: 5rem;
+    position: relative; */
   }
 
   .back-link-text {
-    display: block !important;
-    position: relative;
+    display: none !important;
+    /* position: relative;
     z-index: 10;
-    padding: 1rem;
+    padding: 1rem; */
   }
   
   /* Nascondi social icons nell'header */
@@ -991,8 +992,10 @@ footer p + p {
   }
 
   .only-mobile .logo-image {
-    height: 55px;
-    object-fit: contain;
+    margin: auto;
+    padding-top: 5px;
+    height: 60px;
+    object-fit:fill;
   }
 
   /* Nascondi menu principale */
@@ -1219,4 +1222,8 @@ footer p + p {
 .project-card h3 a {
   text-decoration: none;
   color: inherit;
+}
+
+.contact-form-main {
+  padding: 3.5rem;
 }

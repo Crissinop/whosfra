@@ -266,3 +266,10 @@ document.addEventListener("touchend", (e) => {
     body.style.overflow = "";
   }
 });
+
+window.addEventListener("pageshow", () => {
+  // Assicura che il menu sia sempre chiuso quando si torna a una pagina
+  nav.classList.remove("open");
+  hamburger.classList.remove("active");
+  body.style.overflow = "";
+});
