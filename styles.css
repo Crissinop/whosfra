@@ -91,8 +91,10 @@ a {
 ======================================== */
 .logo,
 .category h2 {
+  width: 100%;
+  height: auto;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 1px;
 }
 
 /* ========================================
@@ -426,6 +428,7 @@ footer p + p {
   margin: auto;
   padding-bottom: 1rem;
   width: fit-content;
+  letter-spacing: 1px;
 }
 
 .image-grid {
@@ -899,6 +902,8 @@ footer p + p {
   }
 
   .category {
+    margin: 0 auto;
+    letter-spacing: 1px;
     text-align: center;
     justify-content: center;
   }
@@ -1169,14 +1174,19 @@ footer p + p {
 
 /* Layout griglia per categorie progetto */
 .projects-grid {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .project-card {
+  width: 100%;
+  height: auto;
   flex: 1 1 540px;
   max-width: 600px;
   display: flex;
@@ -1226,4 +1236,10 @@ footer p + p {
 
 .contact-form-main {
   padding: 3.5rem;
+}
+
+.about-img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }

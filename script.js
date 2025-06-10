@@ -1,7 +1,7 @@
 // ✅ Pulizia e miglioramento script.js
 
 // Disabilita right-click e trascinamento su elementi media
-document.addEventListener("contextmenu", e => e.preventDefault());
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // 🔒 Blocca il trascinamento di immagini e video
