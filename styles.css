@@ -43,8 +43,7 @@
    Base Styles
 ======================================== */
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   background-color: #000 !important;
   font-family: var(--main-font);
   color: #f2f2f2;
@@ -76,6 +75,11 @@ h1 {
   font-weight: 200;
   color: var(--primary-color);
   font-family: var(--main-font);
+}
+
+h2 {
+  margin: 0 auto;
+  text-align: center;
 }
 
 a {
@@ -876,21 +880,20 @@ footer p + p {
   }
 
   h2 {
-    justify-content: center;
+    width: 100%;
     text-align: center;
-    margin: auto;
   }
 
-  .section-title {
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    margin: auto;
+  .section-title h2 {
+    margin: 0 auto;
+    padding-left: 45px;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
   }
 
   main {
     max-width: 1000px;
-    padding-top: 80px;
+    padding-top: 150px;
     padding-right: 2rem;
   }
 
@@ -917,16 +920,40 @@ footer p + p {
     display: none !important;
   }
 
-  /* Mostra hamburger menu */
+/* ==============================
+  Hamburger Menu
+============================== */
   .hamburger {
-    display: block;
     position: absolute;
-    top: 1.2rem;
-    left: 1.5rem;
     z-index: 2000;
     cursor: pointer;
-    font-size: 1.8rem;
     color: var(--primary-color);
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 0;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* ANIMAZIONE hamburger → X */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
   }
 
   .only-mobile {

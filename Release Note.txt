@@ -150,6 +150,8 @@ Martedì 10/06/2025 - 0.2.5
 
 - Miglioramento riguardo l'ottimizzazione mobile
 - Aggiunto spacing tra le categorie nella home (margin-bottom: 12rem)
+- Aggiunta animazione al click dell'hamburger
+- Miglioramento indentazione del codice
 - Miglioramenti minori
 
 ------------------------------------------------------------

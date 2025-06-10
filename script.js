@@ -112,20 +112,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 🍔 Hamburger menu: toggle animazione + comparsa graduale
   const hamburger = document.querySelector(".hamburger");
-const nav = document.querySelector(".only-mobile .header-left nav"); // più preciso
-const body = document.body;
+  const nav = document.querySelector(".only-mobile .header-left nav"); // più preciso
+  const body = document.body;
 
-if (hamburger && nav) {
-  hamburger.addEventListener("click", (e) => {
-    e.stopPropagation(); // ✅ blocca il "click through" sul video
-    nav.classList.toggle("open");
-    hamburger.classList.toggle("active");
+  if (hamburger && nav) {
+    hamburger.addEventListener("click", (e) => {
+      e.stopPropagation(); // ✅ blocca il "click through" sul video
+      nav.classList.toggle("open");
+      hamburger.classList.toggle("active");
 
-    if (nav.classList.contains("open")) {
-      body.style.overflow = "hidden";
-    } else {
-      body.style.overflow = "";
-    }
+      if (nav.classList.contains("open")) {
+        body.style.overflow = "hidden";
+      } else {
+        body.style.overflow = "";
+      }
   });
 
   document.addEventListener("click", (e) => {
@@ -136,7 +136,6 @@ if (hamburger && nav) {
     }
   });
 }
-
 
   // Blocca ogni tentativo di autoplay o interazione video su mobile
 if (window.innerWidth <= 768) {
@@ -164,7 +163,6 @@ document.addEventListener("click", (e) => {
   const categories = document.querySelectorAll(".category");
 });
 });
-
 
 // 📍 Anima immagini quando il titolo di sezione entra nel viewport
 const observer = new IntersectionObserver((entries) => {
@@ -239,4 +237,32 @@ document.addEventListener("DOMContentLoaded", () => {
       // alert("Errore imprevisto. Assicurati di disattivare eventuali AdBlockers.");
     }
   });
+});
+
+// Scroll dell'hamburger
+
+let startX = 0;
+let endX = 0;
+
+document.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+document.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  const distance = endX - startX;
+
+  // Swipe da sinistra verso destra
+  if (startX < 50 && distance > 80 && !nav.classList.contains("open")) {
+    nav.classList.add("open");
+    hamburger.classList.add("active");
+    body.style.overflow = "hidden";
+  }
+
+  // Swipe da destra verso sinistra per chiudere (opzionale)
+  if (startX > 50 && distance < -80 && nav.classList.contains("open")) {
+    nav.classList.remove("open");
+    hamburger.classList.remove("active");
+    body.style.overflow = "";
+  }
 });
