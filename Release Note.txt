@@ -146,6 +146,14 @@ Lunedì 9/06/2025 - 0.2.4
 
 ------------------------------------------------------------
 
+Martedì 10/06/2025 - 0.2.5
+
+- Miglioramento riguardo l'ottimizzazione mobile
+- Aggiunto spacing tra le categorie nella home (margin-bottom: 12rem)
+- Miglioramenti minori
+
+------------------------------------------------------------
+
 Domande
 
 - Modifica in .video-grid: gap: 2rem o 1rem?

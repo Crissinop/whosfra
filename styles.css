@@ -62,8 +62,12 @@ html {
 html.fade-in { opacity: 1; }
 html.fade-out { opacity: 0; }
 
+body.no-scroll {
+  overflow: hidden !important;
+}
+
 main {
-  padding: 2rem;
+  margin: 0 auto;
 }
 
 h1 {
@@ -405,7 +409,7 @@ footer p + p {
    Sections and Grids
 ======================================== */
 .category {
-  margin-bottom: 6rem;
+  margin-bottom: 12rem;
   text-align: center;
 }
 
@@ -415,7 +419,6 @@ footer p + p {
   font-size: 2rem;
   color: var(--primary-color);
   margin: 4rem auto 2rem auto;
-  /* border-bottom: 2px solid #333; */
   padding-bottom: 1rem;
   width: fit-content;
 }
@@ -430,7 +433,7 @@ footer p + p {
   padding: 0 1rem;
 }
 
-.image-grid video {
+/* .image-grid video {
   width: 100%;
   border-radius: 8px;
   transition: transform 0.8s ease, box-shadow 0.8s ease;
@@ -454,7 +457,7 @@ footer p + p {
 
 .image-grid video:nth-child(3n+3):hover {
   transform: scale(1.25) translateX(-10%);
-}
+} */
 
 /* ========================================
    Video Grid Animation
