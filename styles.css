@@ -423,7 +423,7 @@ footer p + p {
   font-weight: 200;
   font-size: 2rem;
   color: var(--primary-color);
-  margin: 4rem auto 2rem auto;
+  margin: auto;
   padding-bottom: 1rem;
   width: fit-content;
 }
