@@ -872,7 +872,9 @@ footer p + p {
   }
 
   main {
-    padding-top: 10px;
+    max-width: 1000px;
+    padding-top: 80px;
+    padding-right: 2rem;
   }
 
   .back-link {

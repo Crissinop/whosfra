@@ -156,6 +156,11 @@ Martedì 10/06/2025 - 0.2.5
 
 Domande
 
-- Modifica in .video-grid: gap: 2rem o 1rem?
+-
+
+------------------------------------------------------------
 
 TO-DO LIST
+
+-
+
