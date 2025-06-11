@@ -153,7 +153,7 @@ a {
   left: 0;
   bottom: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background: #d4af37;
   transition: width 0.3s ease;
 }
