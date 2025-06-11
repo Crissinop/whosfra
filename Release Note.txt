@@ -104,25 +104,25 @@ Sabato 31/05/2025 - 0.2.1
 
 ------------------------------------------------------------
 
-Sabato 31/05/2025 - 0.2.1
+Sabato 31/05/2025 - 0.2.2
 
 - Modificato testo nella pagina about
 
 ------------------------------------------------------------
 
-Domenica 1/06/2025 - 0.2.2
+Domenica 1/06/2025 - 0.2.3
 
 - Miglioramenti minori
 
 ------------------------------------------------------------
 
-Lunedì 2/06/2025 - 0.2.1
+Lunedì 2/06/2025 - 0.2.4
 
 - Temporaneamente nascosti progetti commercial e festival
 
 ------------------------------------------------------------
 
-Martedì 3/06/2025 - 0.2.2
+Martedì 3/06/2025 - 0.2.5
 
 - I video nella pagina di ogni categoria sono ora mostrati tramite griglia orizzontale anziché verticale.
 - Miglioramenti minori
@@ -130,7 +130,7 @@ Martedì 3/06/2025 - 0.2.2
 
 ------------------------------------------------------------
 
-Mercoledì 4/06/2025 - 0.2.3
+Mercoledì 4/06/2025 - 0.2.6
 
 - Ridotta shadow del contact form
 - Migliorata grafica delle label dei progetti
@@ -138,7 +138,7 @@ Mercoledì 4/06/2025 - 0.2.3
 
 ------------------------------------------------------------
 
-Lunedì 9/06/2025 - 0.2.4
+Lunedì 9/06/2025 - 0.2.7
 
 - Miglioramento riguardo l'ottimizzazione mobile
 - Aggiunto letter-spacing: 1px in about-section
@@ -146,12 +146,20 @@ Lunedì 9/06/2025 - 0.2.4
 
 ------------------------------------------------------------
 
-Martedì 10/06/2025 - 0.2.5
+Martedì 10/06/2025 - 0.2.8
 
 - Miglioramento riguardo l'ottimizzazione mobile
 - Aggiunto spacing tra le categorie nella home (margin-bottom: 12rem)
 - Aggiunta animazione al click dell'hamburger
 - Miglioramento indentazione del codice
+- Miglioramenti minori
+
+------------------------------------------------------------
+
+Mercoledì 11/06/2025 - 0.2.9
+
+- Miglioramento riguardo l'ottimizzazione mobile
+- Migliorato centering degli oggetti
 - Miglioramenti minori
 
 ------------------------------------------------------------
