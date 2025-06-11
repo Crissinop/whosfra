@@ -66,6 +66,7 @@ body.no-scroll {
 }
 
 main {
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -234,6 +235,13 @@ a {
 .footer-social.social-icons a:hover .fa-instagram,
 .header-right .social-icons a:hover .fa-instagram {
   color: var(--instagram-color);
+}
+
+/* ========================================
+   Section Title
+======================================== */
+.section-title {
+  padding-top: 4rem;
 }
 
 /* ========================================
@@ -415,7 +423,7 @@ footer p + p {
    Sections and Grids
 ======================================== */
 .category {
-  margin-bottom: 12rem;
+  margin-bottom: 6rem;
   text-align: center;
   justify-content: center;
 }
@@ -521,6 +529,7 @@ footer p + p {
    About Section
 ======================================== */
 .about-section {
+  width: 100%;
   padding: 2rem;
   max-width: 1000px;
   margin: auto;
@@ -579,20 +588,21 @@ footer p + p {
 @media (min-width: 768px) {
   .about-content {
     flex-direction: row;
+    justify-content: center;
     text-align: left;
-    align-items: center;
   }
-  .about-content.about-reverse {
-    flex-direction: row;
-  }
-  .about-content .about-text,
-  .about-content.about-reverse .about-text {
-    max-width: 500px;
-  }
+
   .about-content .about-text {
+    max-width: 500px;
     margin-left: 2rem;
   }
+
+  .about-content.about-reverse {
+    flex-direction: row-reverse;
+  }
+
   .about-content.about-reverse .about-text {
+    margin-left: 0;
     margin-right: 2rem;
   }
   
@@ -1142,11 +1152,14 @@ footer p + p {
   height: auto;
   display: block;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .video-column {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 /* .video-wrapper {
@@ -1175,6 +1188,7 @@ footer p + p {
 /* Layout griglia per categorie progetto */
 .projects-grid {
   width: 100%;
+  max-width: 1400px;
   height: auto;
   margin: 0 auto;
   display: flex;
@@ -1234,7 +1248,7 @@ footer p + p {
   color: inherit;
 }
 
-.contact-form-main {
+.contact-form {
   padding: 3.5rem;
 }
 
