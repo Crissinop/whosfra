@@ -4607,30 +4607,6 @@ function escapeHTML(s) {
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-/* Render project copy as semi-trusted HTML.
-   Authoring rules (data is hard-coded in videoData/vfxData below):
-     • <em>, <strong>, <br> are allowed for emphasis
-     • HTML entities (&ldquo;, &rdquo;, &mdash;, &nbsp;, &amp;) render normally
-     • Anything matching <script ...> or on*="..." event handlers is stripped
-   This is simpler and more permissive than the previous "escape then re-allow"
-   pattern, which was prone to ordering bugs and double-escape pitfalls. The
-   data layer is under our control; the sanitizer is the safety net, not the
-   whole defence. */
-function renderProjectCopy(s) {
-  if (s == null) return '';
-  var html = String(s);
-  /* Strip any <script> blocks outright */
-  html = html.replace(/<script\b[\s\S]*?<\/script\s*>/gi, '');
-  /* Strip standalone <script ...> opening tags (in case malformed) */
-  html = html.replace(/<\s*script\b[^>]*>/gi, '');
-  /* Strip inline event handlers (onclick="...", onerror='...') even within
-     allowed tags. The regex looks for "on" + word + "=" + quoted/unquoted value. */
-  html = html.replace(/\s+on\w+\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '');
-  /* Strip javascript: URIs */
-  html = html.replace(/javascript\s*:/gi, '');
-  return html;
-}
-
 // Module renderers — each returns a DOM node (or null to skip)
 // Adaptive title size: pick a CSS class based on the longest *visible line*
 // of the title (after splitting on <br> and stripping inline tags like <em>).
@@ -5063,9 +5039,7 @@ function renderLegacyDetail(projectData, container) {
 
     var bodyText = pdEl('div', 'pd-dialogue-body');
     var p = pdEl('p');
-    /* innerHTML with whitelist-escaped content: <em>/<strong>/<br> pass
-       through, everything else (including <script>) is rendered as text. */
-    p.innerHTML = renderProjectCopy(text);
+    p.textContent = text;
     bodyText.appendChild(p);
     inner.appendChild(bodyText);
 
@@ -5078,11 +5052,8 @@ function renderLegacyDetail(projectData, container) {
     var sec = pdEl('div', 'project-detail-section project-detail-row pd-module' + (reverse ? ' reverse' : ''));
     var img = pdEl('div', 'project-detail-img');
     img.style.backgroundImage = 'url(' + image + ')';
-    /* Allow <em>/<strong>/<br> + curated typographic entities in both
-       heading and body so editorial markup renders properly. */
     var txt = pdEl('div', 'project-detail-text',
-      '<h2>' + renderProjectCopy(heading) + '</h2>' +
-      '<p>'  + renderProjectCopy(text)    + '</p>');
+      '<h2>' + escapeHTML(heading) + '</h2><p>' + escapeHTML(text) + '</p>');
     sec.appendChild(img);
     sec.appendChild(txt);
     return sec;
@@ -5101,10 +5072,10 @@ function renderLegacyDetail(projectData, container) {
     body.appendChild(buildDialogue('02', projectData.img2, projectData.heading2, projectData.text2, meta));
   }
 
-  /* Closing pull-quote (allow inline em/strong + typographic entities) */
+  /* Closing pull-quote (unchanged) */
   var closing = pdEl('div', 'project-detail-closing pd-module');
   var closingP = pdEl('p', 'project-detail-closing-text');
-  closingP.innerHTML = renderProjectCopy(projectData.closing);
+  closingP.textContent = projectData.closing;
   closing.appendChild(closingP);
   body.appendChild(closing);
 
@@ -5682,12 +5653,12 @@ const videoData = [
       heroImg: 'media/VIDEOS/EUROSOCIALGVNG.jpeg',
       category: 'Commercial', title: 'EUROSOCIALGVNG', client: 'EuroSocialGvng',
       img1: 'media/VIDEOS/EUROSOCIALGVNG_1.jpg',
-      heading1: 'Full creative control',
-      text1: 'EUROSOCIALGVNG reached out to collaborate. We spent some time discussing the new brand identity, and they decided to give me <em>full creative control</em> over the video development. I started by using the graphic assets and color palettes they provided to build a cohesive moodboard — the foundation everything else would be built on.',
+      heading1: 'AI Meets Advertising',
+      text1: 'EUROSOCIALGVNG è un commercial nato dalla sinergia tra visione creativa e intelligenza artificiale. Ogni frame è stato concepito con l\'aiuto di strumenti AI per la generazione di concept visivi, compositing e motion design — spingendo i confini di ciò che un piccolo team può produrre.',
       img2: 'media/VIDEOS/EUROSOCIALGVNG_2.jpg',
-      heading2: 'The brand&rsquo;s DNA',
-      text2: 'I knew I wanted a looped synth/ambient track to help me create something <em>surreal yet elegant</em>. Then I came across the idea of showing the &ldquo;DNA&rdquo; of the brand — and that&rsquo;s where everything started coming together. I generated assets through AI, animated them, and edited everything together in DaVinci &amp; After Effects.',
-      closing: '"The DNA idea unlocked the whole thing. Once I had that, the rest fell into place."',
+      heading2: 'Il Processo Creativo',
+      text2: 'Dall\'ideazione alla delivery, l\'AI ha accelerato ogni fase: storyboarding generativo, color palette automatizzate e prototipazione rapida delle scene. Il risultato è uno spot dal look cinematografico, costruito con un workflow ibrido che unisce artigianalità e tecnologia di frontiera.',
+      closing: '"Concept board generato in un pomeriggio, spot tagliato in tre giorni. L\'AI accorcia, non sostituisce."',
     }
   },
   { title: 'ANCHE GLI EROI MUOIONO', client: 'Kid Yugi', dur: '4:15', cat: 'Video', thumb: 'media/VIDEOS/Jolly.png',
@@ -5696,12 +5667,12 @@ const videoData = [
       heroImg: 'media/VIDEOS/Jolly.png',
       category: 'Video', title: 'Anche Gli Eroi Muoiono', client: 'Kid Yugi',
       img1: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=85&auto=format',
-      heading1: 'The brief',
-      text1: 'The new album <em>Anche gli eroi muoiono</em> by Kid Yugi was released at the end of January. Since I&rsquo;d already worked with Alessio Mariano on the editing of &ldquo;Push-It&rdquo; with Anna Pepe, he asked me if I wanted to work on the AGEM Visual Canvas with <em>Isabella Leucci</em> &mdash; a talented creative and a really close friend of mine. She did amazing pre-production work, building a super detailed, styled moodboard that contained all the elements we wanted in the visuals. The board was instantly accepted, and we started generating the assets.',
+      heading1: 'The Reveal',
+      text1: 'Capturing Lamborghini\'s private unveiling event in Sant\'Agata Bolognese. Three camera operators, two drones, and a Steadicam rig delivered 8+ hours of footage that needed to become a 4-minute masterpiece by the next morning.',
       img2: 'https://images.unsplash.com/photo-1621135802920-133df287f89c?w=800&q=85&auto=format',
-      heading2: 'The pipeline',
-      text2: 'Most of the work was created as still images by Isa through <em>Midjourney</em>. I adjusted all of the artifacts and cleaned the overall image through <em>Nano Banana</em>, then animated them &mdash; mostly with <em>Kling 2.6</em>. A hybrid pipeline where each tool earns its place: nothing automatic, every shot interrogated.',
-      closing: '"The moodboard was instant. The execution was everything that came after."',
+      heading2: 'Overnight Edit',
+      text2: 'Turnaround was 14 hours from wrap to delivery. Proxy editing in Premiere Pro, followed by a rapid online conform and color pass. The result: a sleek highlights reel that was on Lamborghini\'s social channels before attendees had finished breakfast.',
+      closing: '"Fourteen hours from wrap to delivery. The edit was the deadline."',
     }
   },
 ];
@@ -5784,7 +5755,7 @@ const vfxData = [
     titleHtml: 'After<em>movie</em>',
     artist: 'DMT',
     feat: null,
-    desc: 'Shot in-club with no pre-plan. Opens on a 3D gaussian-splat bullet-time over Vilain&rsquo;s folk remix &mdash; then drops into gabber. Contrast as the spine.',
+    desc: 'Speed ramps, motion-tracked type, beat-synced flashes. Cut for vertical and horizontal in the same pass &mdash; one rhythm, two crops.',
     mainImg: VFX_PATH + 'VFX_2.png',
     subImg:  VFX_PATH + 'VFX_2-1.png',
     detail: {
@@ -5800,13 +5771,13 @@ const vfxData = [
           title: 'Aftermovie',
           client: 'DMT Collective' },
         { type: 'stats-strip', items: [
-          { value: 'October',  label: 'Event' },
-          { value: '3yr',      label: 'With DMT' },
-          { value: 'Gabber',   label: 'Genre' },
-          { value: '3D Splat', label: 'Bullet-time' }
+          { value: '01',     label: 'Night' },
+          { value: '136',    label: 'BPM avg.' },
+          { value: '4h',     label: 'Setlist' },
+          { value: '2min',   label: 'Runtime' }
         ]},
         { type: 'pull-quote',
-          text: 'When you&rsquo;re working with video, the key to doing good work is to create some contrast.' },
+          text: 'The cut sets the rhythm. The VFX just stops getting in its way.' },
         { type: 'contact-sheet',
           label: 'Selected frames',
           frames: [
@@ -5818,8 +5789,8 @@ const vfxData = [
             VFX_PATH + 'VFX_2-1.png'
           ]},
         { type: 'director-note',
-          name: 'Director&rsquo;s note',
-          text: 'I love working at techno events, and I love working with the DMT fam even more. It&rsquo;s been two or three years since I started shooting with them &mdash; also thanks to my dear friend B-Killer, a talented creative &mdash; and I&rsquo;ve always felt at home. At that October event I knew I wanted to make something special. I didn&rsquo;t pre-plan anything: I shot as much as I could from inside the club, trying to catch the inspiring people on the dance floor. The magic happened in the edit. A guest DJ, Vilain, had just remixed &ldquo;La Pizzica di San Vito&rdquo; from the Salentinian folklore. I had no doubts &mdash; the video had to open with the original song, which isn&rsquo;t techno of course. People dancing gabber over a folk track: that contrast became the spine. I also opened with a 3D gaussian-splat bullet-time section, where the dance floor was completely frozen in time and space as the song started.' },
+          name: 'Director’s note',
+          text: 'Vertical and horizontal cut from one master timeline, recomposed shot by shot. The trick was protecting subject space in the wide so the 9:16 reframe didn\'t murder the rhythm. Two crops, one edit, no reshoots.' },
         { type: 'credits', items: [
           { role: 'Client', name: 'DMT Collective' },
           { role: 'Edit',   name: 'Francesco Aiena' },
@@ -5827,7 +5798,7 @@ const vfxData = [
           { role: 'Motion', name: 'Francesco Aiena' }
         ]},
         { type: 'pull-quote',
-          text: 'Bullet-time on a folk song. The room froze, the music shifted, the floor woke up.' }
+          text: 'You weren\u2019t there or you were. Either way, the cut has to make you feel like you were.' }
       ]
     }
   },
